@@ -1,0 +1,31 @@
+.listado-servicios {
+    @include grid(1, 2rem);
+    @include telefono {
+        @include grid(2, 2rem);
+    }
+}
+.servicio {
+    background-color: $blanco;
+    border-radius: 1rem;
+    padding: 0 $separacion/3;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    .nombre-servicio {
+        color: $negro;
+    }
+    .precio-servicio {
+        color: $azul;
+        font-weight: $bold;
+    }
+
+    &.seleccionado {
+        background-color: $azul;
+        p {
+            color: $blanco;
+        }
+    }
+}
+
